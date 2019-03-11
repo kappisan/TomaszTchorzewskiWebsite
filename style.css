@@ -30,6 +30,19 @@ label {
   padding-left: 50px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a img {
+  padding: 10px;
+}
+
+a:hover img {
+  transform: scale(1.2)
+}
+
 .bgimg-1,
 .bgimg-2,
 .bgimg-3,
