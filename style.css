@@ -47,6 +47,23 @@ a:hover img {
   padding-bottom: 20px;
 }
 
+#stay-updated-confirmation {
+  color: #222;
+}
+
+.header-icons {
+  width: 200px;
+  display: inline-block;
+  float: right;
+  padding: 6px;
+}
+
+#top-header {
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
 .bgimg-1,
 .bgimg-2,
 .bgimg-3,
@@ -134,11 +151,18 @@ a:hover img {
   margin: 20px;
 }
 
-.contact-bg-img {
+.contact-me-frame {
+  width: 100%;
+  overflow-x: hidden;
   position: absolute;
-  left: 0;
   z-index: -1;
+}
+
+.contact-bg-img {
+  position: relative;
+  height: 100%;
   opacity: 0.4;
+  left: 0;
 }
 
 .caption {
@@ -181,4 +205,31 @@ h3 {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
   }
+}
+
+
+/* loading spinner */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #222;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: relative;
+  margin: 20px auto;
+  left: 0;
+  right: 0;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

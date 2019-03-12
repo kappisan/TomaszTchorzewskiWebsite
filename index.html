@@ -5,6 +5,7 @@
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="description" content="Hi I am Tomasz, you may have met me somewhere or seen me online. This is my website. I am a passionate entrepreneur who believes in creating massive shared value through creativity, culture and community. My background is Industrial design and I am focused on several core business activities, Property Investment and development, Design, web and software.">
   <meta content="Tchorzewski,Tomasz,MenacingMedia,Property,Business,Entrepreneur,Design,Technology" name="keywords">
   <meta charset="UTF-8">
 
@@ -13,6 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tchorzewski.co.uk" />
   <meta property="og:image" content="https://tchorzewski.co.uk/img/tomasz.jpg" />
+  <meta property="og:description" content="Hi I am Tomasz, you may have met me somewhere or seen me online. This is my website. I am a passionate entrepreneur who believes in creating massive shared value through creativity, culture and community. My background is Industrial design and I am focused on several core business activities, Property Investment and development, Design, web and software." />
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json">
@@ -30,16 +32,30 @@
 <div class="name-header">
   <h1>TOMASZ TCHORZEWSKI</h1>
 </div>
-<div class="top-header" style="width: 100%; background-color: #000">
-  <p>About Me</p>
-  <p>What I do</p>
-  <p>My Vlog</p>
-  <p>Contact</p>
+<div id="top-header" class="top-header" style="width: 100%; background-color: #000">
+  <p onclick="$('html').animate({scrollTop: $('#about-me-section').position().top }, 'slow')">About Me</p>
+  <p onclick="$('html').animate({scrollTop: $('#what-i-do-section').position().top }, 'slow')">What I do</p>
+  <p onclick="$('html').animate({scrollTop: $('#my-vlog-section').position().top }, 'slow')">My Vlog</p>
+  <p onclick="$('html').animate({scrollTop: $('#contact-section').position().top }, 'slow')">Contact</p>
+
+  <div class="header-icons">
+    <a href="https://www.facebook.com/TomaszTchorzewskiSpinningHouse" target="_blank">
+      <img src="./img/facebook-icon.webp">
+    </a>
+    <a href="https://www.instagram.com/tomasz_tcho/" target="_blank">
+      <img src="./img/insta-icon.webp">
+    </a>
+    <a href="https://www.youtube.com/channel/UCR2AeQRVSNov5cKVbXGxWew?fbclid=IwAR3S2gUAbSk8pGohtm8QeWkeadjMCQlhp5pLVHkDIV3-elVAOVzuEyH65gI" target="_blank">
+      <img src="./img/youtube-icon.webp">
+    </a>
+  </div>
+
+
 </div>
 
 <div class="bgimg-1"></div>
 
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+<div id="about-me-section" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <h3 style="text-align:center;">ABOUT ME</h3>
   <p class="section-slogan">I do. Property. Design. Web</p>
 
@@ -71,6 +87,10 @@
           </div>
         </form>
 
+        <div id="stay-updated-confirmation"></div>
+
+        <div id="stay-updated-spinner" class="loader" style="display: none"></div>
+
       </div>
       <div class="stay-updated-box">
         <div class="stay-updated-box-underline">
@@ -93,7 +113,7 @@
 
 <div class="bgimg-3"></div>
 
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+<div id="what-i-do-section" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <h3 style="text-align:center;">WHAT I DO</h3>
   <p class="section-slogan">My business activities</p>
   <table class="what-i-do-table">
@@ -133,15 +153,19 @@
 
 <div class="bgimg-4"></div>
 
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;">
+<div id="my-vlog-section" style="color: #777;background-color:white;text-align:center;padding:50px 80px;">
   <h3 style="text-align:center;">MY VLOG</h3>
   <p class="section-slogan">Where I Share</p>
   
   <img src="img/vlog.PNG">
 </div>
 
-<div class="bgimg-5">
-  <img src="./img/5.webp" class="contact-bg-img">
+<div id="contact-section" class="bgimg-5">
+  <div class="contact-me-frame">
+    <img src="./img/5.webp" class="contact-bg-img">
+  </div>
+
+
   <h3 style="padding-top: 50px">CONTACT ME</h3>
   <p style="color: #333">For promotional and business collaborations,  or for any personal questions, you can reach me here: </p>
 
@@ -170,6 +194,10 @@
       <button type="submit" onclick="sendMessage(event)">SEND MESSAGE</button>
     </div>
   </form>
+
+  <div id="send-message-spinner" class="loader" style="display: none"></div>
+
+  <div id="send-confirmation"></div>
 </div>
 
 <div class="footer">
@@ -182,7 +210,7 @@
   <a href="https://www.youtube.com/channel/UCR2AeQRVSNov5cKVbXGxWew?fbclid=IwAR3S2gUAbSk8pGohtm8QeWkeadjMCQlhp5pLVHkDIV3-elVAOVzuEyH65gI" target="_blank">
     <img src="./img/youtube-icon.webp">
   </a>
-  <p>made by <a href="https://menacingmedia.com/" target="_blank">Menacing Media</a> 2019</p>
+  <p>copyright <a href="https://menacingmedia.com/" target="_blank">Menacing Media</a> 2019</p>
 </div>
 
 <!-- register service worker for PWA caching -->
@@ -196,81 +224,13 @@
 </script>
 
 <script>
-
-document.getElementById("contact-form").addEventListener("click", function(event){
-  event.preventDefault()
-});
-
-  function subscribeNow(e) {
-    console.log("subscribeNow", e);
-    e.preventDefault();
-
-   var URL = "https://u7v9xytsb9.execute-api.us-east-1.amazonaws.com/01/contact-tchorzewski";
-
-   var data = {
-      name: 'n/a',
-      email: $('#stay-updated-email').val(),
-      subject: 'subscribe email',
-      message: 'I would like to subscribe',
-    };
-
-    console.log("this is payload, subscribe email", data);
-
-     $.ajax({
-       type: "POST",
-       url : "https://u7v9xytsb9.execute-api.us-east-1.amazonaws.com/01/contact",
-       dataType: "json",
-       crossDomain: "true",
-       contentType: "application/json; charset=utf-8",
-       data: JSON.stringify(data),
-
-       success: function () {
-        // clear form and show a success message
-        console.log("Successfull");
-        //document.getElementById("contact-form").reset();
-        location.reload();
-       },
-       error: function () {
-         // show an error message
-         console.log("UnSuccessfull");
-       }});
-
-  }
-
-  function sendMessage(e) {
-    console.log("SEND MESSAGE", e);
-   e.preventDefault();
-   var URL = "https://u7v9xytsb9.execute-api.us-east-1.amazonaws.com/01/contact-tchorzewski";
-
-   var data = {
-      name: $('#contact-name').val(),
-      email: $('#contact-email').val(),
-      subject: $('#contact-subject').val(),
-      message: $('#contact-message').val(),
-    };
-
-    console.log("this is payload", data);
-
-     $.ajax({
-       type: "POST",
-       url : "https://u7v9xytsb9.execute-api.us-east-1.amazonaws.com/01/contact",
-       dataType: "json",
-       crossDomain: "true",
-       contentType: "application/json; charset=utf-8",
-       data: JSON.stringify(data),
-
-       success: function () {
-        // clear form and show a success message
-        console.log("Successfull");
-        //document.getElementById("contact-form").reset();
-        location.reload();
-       },
-       error: function () {
-         // show an error message
-         console.log("UnSuccessfull");
-       }});
+  function scrollTo(id) {
+    console.log("scroll to", $("#" + id).offset());
+    $(document).scrollTop( $("#" + id).offset().top );  
   }
 </script>
+
+<script src="./main.js"></script>
 
 </body>
 </html>
