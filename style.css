@@ -43,6 +43,10 @@ a:hover img {
   transform: scale(1.2)
 }
 
+#contact-form {
+  padding-bottom: 20px;
+}
+
 .bgimg-1,
 .bgimg-2,
 .bgimg-3,
@@ -82,6 +86,52 @@ a:hover img {
   min-height: 400px;
   text-align: center;
   color: #fff;
+}
+
+.text-wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+
+.what-i-do-table {
+  padding: 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.what-i-do-table td {
+  padding: 10px 20px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.section-slogan {
+  text-align: center;
+  letter-spacing: 0.8em;
+  font-family: monospace;
+  margin: 0 10px 60px;
+}
+
+.stay-updated-box {
+  width: 400px;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.stay-updated-box a img {
+  filter: invert(90%);
+}
+
+.stay-updated-box-underline {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  margin: 20px;
 }
 
 .contact-bg-img {
