@@ -26,7 +26,6 @@ label {
   display: block;
   text-align: left;
   font-weight: bold;
-  width: 100%;
   padding-left: 50px;
 }
 
@@ -64,6 +63,14 @@ a:hover img {
   z-index: 999;
 }
 
+#my-vlog-section {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  padding: 50px 80px;
+  overflow-x: scroll;
+}
+
 .bgimg-1,
 .bgimg-2,
 .bgimg-3,
@@ -77,24 +84,24 @@ a:hover img {
 
 }
 .bgimg-1 {
-  background-image: url("img/1.webp");
+  background-image: url("img/1.jpg");
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("img/2.webp");
+  background-image: url("img/2.jpg");
   min-height: 600px;
   vertical-align: center;
 }
 
 .bgimg-3 {
-  background-image: url("img/3.webp");
+  background-image: url("img/3.jpg");
   min-height: 600px;
   vertical-align: center;
 }
 
 .bgimg-4 {
-  background-image: url("img/4.webp");
+  background-image: url("img/4.jpg");
   min-height: 600px;
   vertical-align: center;
 }
@@ -152,10 +159,14 @@ a:hover img {
 }
 
 .contact-me-frame {
+  height: 600px;
   width: 100%;
   overflow-x: hidden;
   position: absolute;
   z-index: -1;
+  background-image: url(./img/5.jpg);
+  background-position: center;
+  opacity: 0.5;
 }
 
 .contact-bg-img {
