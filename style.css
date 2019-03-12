@@ -173,6 +173,7 @@ h3 {
 .top-header p {
   display: inline-block;
   padding: 2px 20px;
+  font-family: monospace;
 }
 
 /* Turn off parallax scrolling for tablets and phones */

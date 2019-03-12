@@ -2,8 +2,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta content="Tchorzewski,Tomasz,MenacingMedia,Property,Business,Entrepreneur,Design,Technology" name="keywords">
+  <meta charset="UTF-8">
+
+  <!-- facebook meta data -->
+  <meta property="og:title" content="Tomasz Tchorzewski" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tchorzewski.co.uk" />
+  <meta property="og:image" content="https://tchorzewski.co.uk/img/tomasz.jpg" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/512x512.png">
+
   <link rel="icon" href="./favicon.ico">
+
   <title>Tomasz Tchorzewski</title>
   <link href="./style.css" rel="stylesheet">
 
@@ -83,19 +99,30 @@
   <table class="what-i-do-table">
     <tr>
       <td><img src="img/MM_logo.webp"></td>
-      <td><b>Menacing Media</b><br><br>
-        A business I am proud to be a part of this multi-disciplinary web and media company, it services my needs within property and can service yours too check us out HERE</td>
+      <td>
+        <a href="https://menacingmedia.com" target="_blank"><b>Menacing Media</b></a>
+
+        <br><br>
+        A business I am proud to be a part of this multi-disciplinary web and media company, it services my needs within property and can service yours too check us out HERE
+      </td>
     </tr>
     <tr>
       <td><img src="img/Spinning_House_Logo_Black.webp"></td>
-      <td><b>Spinning House Design Studio</b><br><br>
-        Our in house design studio, dealing with all aspects of design for our property and online activities. Clientele are by selection only, my first business and one that we are looking to grow massively in the near future. My key partner in this business is Masayuki Kishi, Find out more about Masa's work HERE</td>
+      <td>
+        <b>Spinning House Design Studio</b>
+
+        <br><br>
+        Our in house design studio, dealing with all aspects of design for our property and online activities. Clientele are by selection only, my first business and one that we are looking to grow massively in the near future. My key partner in this business is Masayuki Kishi, Find out more about Masa's work HERE
+      </td>
     </tr>
     <tr>
       <td><img src="img/Spinning_House_Logo_Property.webp"></td>
       <td>
-<b>Spinning House Investment Property</b><br><br>
-        My main area of operation, We are a multi-strategy property investment company with a portfolio of holiday lets and Multi-let properties. We work with our own funds and Joint venture partners to bring high quality accommodation to the east of England. For more info click HERE</td>
+        <b>Spinning House Investment Property</b>
+
+        <br><br>
+        My main area of operation, We are a multi-strategy property investment company with a portfolio of holiday lets and Multi-let properties. We work with our own funds and Joint venture partners to bring high quality accommodation to the east of England. For more info click HERE
+      </td>
     </tr>
   </table>
 
@@ -157,6 +184,16 @@
   </a>
   <p>made by <a href="https://menacingmedia.com/" target="_blank">Menacing Media</a> 2019</p>
 </div>
+
+<!-- register service worker for PWA caching -->
+<script>
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(function() {
+        console.log('Service Worker Registered');
+      });
+  }
+</script>
 
 <script>
 
