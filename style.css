@@ -25,8 +25,8 @@ input, textarea {
 label {
   display: block;
   text-align: left;
-  font-weight: bold;
   padding-left: 50px;
+  color: #333;
 }
 
 a {
@@ -84,7 +84,7 @@ a:hover img {
 
 }
 .bgimg-1 {
-  background-image: url("img/1.jpg");
+  background-image: url("img/4.jpg");
   min-height: 100%;
 }
 
@@ -110,6 +110,24 @@ a:hover img {
   min-height: 400px;
   text-align: center;
   color: #fff;
+}
+
+.name-title {
+  font-size: 32px;
+  color: #fff;
+  padding: 200px;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;  
+}
+
+.frosted-container {
+  color: #aaa;
+  background-color:rgba(0,0,0,0.6);
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+  margin-top: 400px;
+  backdrop-filter: blur(2px);
 }
 
 .text-wrapper {
@@ -198,11 +216,6 @@ h3 {
   text-transform: uppercase;
   font: 20px "Lato", sans-serif;
   color: #111;
-}
-
-.name-header {
-  width: 100%;
-  text-align: center
 }
 
 .top-header p {

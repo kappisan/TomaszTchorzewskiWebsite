@@ -20,7 +20,9 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/512x512.png">
 
-  <link rel="icon" href="./favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="./img/icons/512x512.png">
 
   <title>Tomasz Tchorzewski</title>
   <link href="./style.css" rel="stylesheet">
@@ -29,9 +31,8 @@
 </head>
 <body>
 
-<div class="name-header">
-  <h1>TOMASZ TCHORZEWSKI</h1>
-</div>
+<!--
+
 <div id="top-header" class="top-header" style="width: 100%; background-color: #000">
   <p onclick="$('html').animate({scrollTop: $('#about-me-section').position().top }, 'slow')">About Me</p>
   <p onclick="$('html').animate({scrollTop: $('#what-i-do-section').position().top }, 'slow')">What I do</p>
@@ -49,25 +50,31 @@
       <img src="./img/youtube-icon.jpg">
     </a>
   </div>
-
-
 </div>
 
-<div class="bgimg-1"></div>
+-->
 
-<div id="about-me-section" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;">ABOUT ME</h3>
-  <p class="section-slogan">I do. Property. Design. Web</p>
+<div class="bgimg-1">
+  
+  <h1 class="name-title">Tomasz Tchorzewski<br> <span style="font-size: 52px">Entrepreneur</span></h1>
 
-  <div class="text-wrapper">
-    <p>Hi I am Tomasz, you may have met me somewhere or seen me online. This is my website.</p>
-    <p>Welcome.</p>
-    <p>I am a passionate entrepreneur who believes in creating massive shared value through creativity, culture and community. My background is Industrial design and I am focused on several core business activities, Property Investment and development, Design, web and software. My main area of operation is within the property sector with my other activities linking into this focus. My dream is to start a international hotel business that changes the world for the better... how it will change the world? I haven't figured that part out yet.</p>
-    <p>I have built up great relationships across my areas of business and have built a portfolio of multi-let properties and holiday lets. I believe in long term business partnerships and in building a legacy for the next generation. And of course having great fun along the way!</p>
+
+  <div class="frosted-container">
+    <h3 style="text-align:center;">ABOUT ME</h3>
+    <p class="section-slogan">I do. Property. Design. Web</p>
+
+    <div class="text-wrapper">
+      <p>Hi I am Tomasz, you may have met me somewhere or seen me online. This is my website.</p>
+      <p>Welcome.</p>
+      <p>I am a passionate entrepreneur who believes in creating massive shared value through creativity, culture and community. My background is Industrial design and I am focused on several core business activities, Property Investment and development, Design, web and software. My main area of operation is within the property sector with my other activities linking into this focus. My dream is to start a international hotel business that changes the world for the better... how it will change the world? I haven't figured that part out yet.</p>
+      <p>I have built up great relationships across my areas of business and have built a portfolio of multi-let properties and holiday lets. I believe in long term business partnerships and in building a legacy for the next generation. And of course having great fun along the way!</p>
+    </div>
   </div>
+
+
 </div>
 
-<div class="bgimg-2"></div>
+<!--
 
 <div style="position:relative; overflow-x: scroll;">
   <div style="color:#ddd;background-color:#fff;text-align:center;padding:50px 80px;text-align: center;">
@@ -151,19 +158,11 @@
   </div>
 </div>
 
-<div class="bgimg-4"></div>
+-->
 
-<div id="my-vlog-section" style="color: #777;background-color:white;text-align:center;padding:50px 80px;">
-  <h3 style="text-align:center;">MY VLOG</h3>
-  <p class="section-slogan">Where I Share</p>
-  
-  <img src="img/vlog.PNG">
-</div>
+
 
 <div id="contact-section" class="bgimg-5">
-  <div class="contact-me-frame">
-    <!--<img src="./img/5.jpg" class="contact-bg-img">-->
-  </div>
 
 
   <h3 style="padding-top: 50px">CONTACT ME</h3>
@@ -187,7 +186,7 @@
 
     <div>
       <label>message</label>
-      <textarea id="contact-message"></textarea>
+      <textarea id="contact-message" style="height: 200px"></textarea>
     </div>
 
     <div>
@@ -200,6 +199,7 @@
   <div id="send-confirmation"></div>
 </div>
 
+
 <div class="footer">
   <a href="https://www.facebook.com/TomaszTchorzewskiSpinningHouse" target="_blank">
     <img src="./img/facebook-icon.jpg">
@@ -210,7 +210,7 @@
   <a href="https://www.youtube.com/channel/UCR2AeQRVSNov5cKVbXGxWew?fbclid=IwAR3S2gUAbSk8pGohtm8QeWkeadjMCQlhp5pLVHkDIV3-elVAOVzuEyH65gI" target="_blank">
     <img src="./img/youtube-icon.jpg">
   </a>
-  <p>copyright <a href="https://menacingmedia.com/" target="_blank">Menacing Media</a> 2019</p>
+  <p>Designed by <a href="https://menacingmedia.com/" target="_blank">Menacing Media</a> 2019</p>
 </div>
 
 <!-- register service worker for PWA caching -->

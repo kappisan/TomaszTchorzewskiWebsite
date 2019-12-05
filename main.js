@@ -1,9 +1,11 @@
 var URL = "https://u7v9xytsb9.execute-api.us-east-1.amazonaws.com/01/contact";
 //var URL = "https://u7v9xytsb9.execute-api.us-east-1.amazonaws.com/01/contact-tchorzewski";
 
+/*
 document.getElementById("contact-form").addEventListener("click", function(event){
 event.preventDefault()
 });
+*/
 
 function subscribeNow(e) {
   console.log("subscribeNow", e);
@@ -88,6 +90,7 @@ function sendMessage(e) {
       }});
 }
 
+/*
 $(document).on('scroll', function() {
   var fromTop = $(document).scrollTop();
   //console.log('scrolling', fromTop);
@@ -99,6 +102,7 @@ $(document).on('scroll', function() {
     $("#top-header").css("position", "relative");
   }
 });
+*/
 
 /*
 $(window).scroll(function() {
